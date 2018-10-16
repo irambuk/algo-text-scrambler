@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using TextScrambler.Scrambler;
 
 namespace TextScrambler
@@ -16,14 +18,19 @@ namespace TextScrambler
             {
                 "test",
                 "sample",
-                "another test",
-                "asdf adf adsfa 323423 @#$#@dfsd df",
+                "test sample",
+                "sample test",
+                "asdf sample test 323423 @#$#@dfsd df",
                 "teetw sdfds.dsf sfdfsdf #@#$32 sdfsf fdsfs"
             };
 
+            var skipChars = new List<char> { ' ', '$'};
+            var outputChars = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray().ToList();
+
+            WriteDataTableHeader("Text", "Scrambled Text");
             foreach (var text in textList)
             {
-                var scrambledText = scrambler.Scramble(seed, text);
+                var scrambledText = scrambler.Scramble(seed, text, skipChars, outputChars);
                 WriteDataTableRow(text, scrambledText);
             }
 
