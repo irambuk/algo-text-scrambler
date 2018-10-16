@@ -11,9 +11,8 @@ The algorithm performs
 
 
 ### Sample Output
-Scramble skip chars: space, $
-Scramble output chars: abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
-
+Scramble skip chars: space, $  
+Scramble output chars: abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ 
 
 |Text|Text-Length|Scrambled Text|Scrambled Text-Length|
 |-----------|-----------|-----------|-----------|
