@@ -7,6 +7,6 @@ namespace TextScrambler.Scrambler
 {
     public interface IStringScrambler
     {
-        string Scramble(string seed, string text, List<char> scrambleSkipChars, List<char> scrambledOutputChars);
+        string Scramble(string seedText, int seedInt, string text, List<char> scrambleSkipChars, List<char> scrambledOutputChars);
     }
 }

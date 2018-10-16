@@ -11,17 +11,19 @@ The algorithm performs
 
 
 ### Sample Output
+Seed text: 'This is a seed'  
+Seed integer: 3433  
 Scramble skip chars: space, $  
 Scramble output chars: abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ 
 
 |Text|Text-Length|Scrambled Text|Scrambled Text-Length|
 |-----------|-----------|-----------|-----------|
-|test|4|z8hR|4|
-|sample|6|zlhRVj|6|
-|test sample|11|z8hR lbt4tx|11|
-|sample test|11|zlhRVj 8lnr|11|
-|asdf sample test 323423 @#$#@dfsd df|36|zRfP lbt4tx 2xfP JppFvz HZ$L8XJNR Df|36|
-|teetw sdfds.dsf sfdfsdf #@#$32 sdfsf fdsfs|42|z8BRr fLlpXt2P2 4nlf6fR PzV$2L NRXZf NBn2J|42|
+|test|4|DnFx|4|
+|sample|6|Txh6xP|6|
+|test sample|11|DnFx h6HPLH|11|
+|sample test|11|Txh6xP t6f0|11|
+|asdf sample test 323423 @#$#@dfsd df|36|jVNd h6HPLH FdHz HJznDb vb$tlfX6J pt|36|
+|teetw sdfds.dsf sfdfsdf #@#$32 sdfsf fdsfs|42|DnVxH xhzxvn2Xn PZbRNnD TdR$nF 6JlNt 2J0Fd|42|
 
 ### Possible Improvements
 

@@ -6,9 +6,9 @@ namespace TextScrambler.Scrambler
 {
     public class StringScrambler : IStringScrambler
     {
-        public string Scramble(string seed, string text, List<char> scrambleSkipChars, List<char> scrambledOutputChars)
+        public string Scramble(string seedText, int seedInt, string text, List<char> scrambleSkipChars, List<char> scrambledOutputChars)
         {
-            if (string.IsNullOrWhiteSpace(seed) || string.IsNullOrWhiteSpace(text))
+            if (string.IsNullOrWhiteSpace(seedText) || string.IsNullOrWhiteSpace(text))
             {
                 throw new ArgumentException("Given seed or text is not valid.");
             }
@@ -20,20 +20,20 @@ namespace TextScrambler.Scrambler
             for (int i = 0; i < textChars.Length; i++)
             {
                 var textChar = textChars[i];
-                buffer.Append(ScrambleChar(seed, textChar, i, scrambleSkipChars, scrambledOutputChars));
+                buffer.Append(ScrambleChar(seedText, textChar, i + seedInt, scrambleSkipChars, scrambledOutputChars));
             }
 
             return buffer.ToString();
         }
 
-        private char ScrambleChar(string seed, char textChar, int textCharPosition, List<char> scrambleSkipChars, List<char> scrambledOutputChars)
+        private char ScrambleChar(string seed, char textChar, int intStart, List<char> scrambleSkipChars, List<char> scrambledOutputChars)
         {
             if (scrambleSkipChars.Contains(textChar))
             {
                 return textChar;
             }
 
-            var current = (int)textChar * textCharPosition;
+            var current = (int)textChar * intStart;
 
             //Process the given char for each char in the seed
             foreach (var seedChar in seed.ToCharArray())

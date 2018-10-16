@@ -12,7 +12,8 @@ namespace TextScrambler
             Console.WriteLine("Starting text scrambling test");
 
             var scrambler = new StringScrambler();
-            var seed = "This is a seed";
+            var seedText = "This is a seed";
+            var seedInt = 3433;
 
             var textList = new string[] 
             {
@@ -30,7 +31,7 @@ namespace TextScrambler
             WriteDataTableHeader("Text", "Scrambled Text");
             foreach (var text in textList)
             {
-                var scrambledText = scrambler.Scramble(seed, text, skipChars, outputChars);
+                var scrambledText = scrambler.Scramble(seedText, seedInt, text, skipChars, outputChars);
                 WriteDataTableRow(text, scrambledText);
             }
 
